@@ -11,6 +11,12 @@
 		5E7CEAB72CB885FD00707D64 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7CEAB62CB885FD00707D64 /* ContentView.swift */; };
 		5E7CEAB92CB885FE00707D64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E7CEAB82CB885FE00707D64 /* Assets.xcassets */; };
 		5E7CEABD2CB885FE00707D64 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E7CEABC2CB885FE00707D64 /* Preview Assets.xcassets */; };
+		5E7CEAC52CB88E2500707D64 /* SpeechToTextService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7CEAC42CB88E2500707D64 /* SpeechToTextService.swift */; };
+		5E7CEAC82CB88E6C00707D64 /* SpeechToTextServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7CEAC72CB88E6C00707D64 /* SpeechToTextServiceProtocol.swift */; };
+		5E7CEACB2CB8917E00707D64 /* RecognizerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7CEACA2CB8917E00707D64 /* RecognizerError.swift */; };
+		5E7CEACE2CB891CD00707D64 /* SpeechRecognitionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7CEACD2CB891CD00707D64 /* SpeechRecognitionExtensions.swift */; };
+		5E7CEAD22CB8930100707D64 /* SpeechToTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7CEAD12CB8930100707D64 /* SpeechToTextViewModel.swift */; };
+		5E7CEAD42CB8955A00707D64 /* SpeechToTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7CEAD32CB8955A00707D64 /* SpeechToTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,12 @@
 		5E7CEAB82CB885FE00707D64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E7CEABA2CB885FE00707D64 /* SpeechToText.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpeechToText.entitlements; sourceTree = "<group>"; };
 		5E7CEABC2CB885FE00707D64 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5E7CEAC42CB88E2500707D64 /* SpeechToTextService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechToTextService.swift; sourceTree = "<group>"; };
+		5E7CEAC72CB88E6C00707D64 /* SpeechToTextServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechToTextServiceProtocol.swift; sourceTree = "<group>"; };
+		5E7CEACA2CB8917E00707D64 /* RecognizerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizerError.swift; sourceTree = "<group>"; };
+		5E7CEACD2CB891CD00707D64 /* SpeechRecognitionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionExtensions.swift; sourceTree = "<group>"; };
+		5E7CEAD12CB8930100707D64 /* SpeechToTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechToTextViewModel.swift; sourceTree = "<group>"; };
+		5E7CEAD32CB8955A00707D64 /* SpeechToTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechToTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +64,11 @@
 		5E7CEAB32CB885FD00707D64 /* SpeechToText */ = {
 			isa = PBXGroup;
 			children = (
-				5E7CEAB42CB885FD00707D64 /* SpeechToTextApp.swift */,
+				5E7CEAC32CB88DDF00707D64 /* SpeechToTextService */,
+				5E7CEAD52CB89DAA00707D64 /* ViewModel */,
+				5E7CEAD62CB89DBB00707D64 /* View */,
 				5E7CEAB62CB885FD00707D64 /* ContentView.swift */,
+				5E7CEAB42CB885FD00707D64 /* SpeechToTextApp.swift */,
 				5E7CEAB82CB885FE00707D64 /* Assets.xcassets */,
 				5E7CEABA2CB885FE00707D64 /* SpeechToText.entitlements */,
 				5E7CEABB2CB885FE00707D64 /* Preview Content */,
@@ -67,6 +82,57 @@
 				5E7CEABC2CB885FE00707D64 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5E7CEAC32CB88DDF00707D64 /* SpeechToTextService */ = {
+			isa = PBXGroup;
+			children = (
+				5E7CEACC2CB891A500707D64 /* Extensions */,
+				5E7CEAC92CB8917100707D64 /* Errors */,
+				5E7CEAC62CB88E5300707D64 /* Protocol */,
+				5E7CEAC42CB88E2500707D64 /* SpeechToTextService.swift */,
+			);
+			path = SpeechToTextService;
+			sourceTree = "<group>";
+		};
+		5E7CEAC62CB88E5300707D64 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				5E7CEAC72CB88E6C00707D64 /* SpeechToTextServiceProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		5E7CEAC92CB8917100707D64 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				5E7CEACA2CB8917E00707D64 /* RecognizerError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		5E7CEACC2CB891A500707D64 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5E7CEACD2CB891CD00707D64 /* SpeechRecognitionExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5E7CEAD52CB89DAA00707D64 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5E7CEAD12CB8930100707D64 /* SpeechToTextViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5E7CEAD62CB89DBB00707D64 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E7CEAD32CB8955A00707D64 /* SpeechToTextView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +206,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E7CEAB72CB885FD00707D64 /* ContentView.swift in Sources */,
+				5E7CEAD22CB8930100707D64 /* SpeechToTextViewModel.swift in Sources */,
+				5E7CEACE2CB891CD00707D64 /* SpeechRecognitionExtensions.swift in Sources */,
+				5E7CEAC82CB88E6C00707D64 /* SpeechToTextServiceProtocol.swift in Sources */,
+				5E7CEAD42CB8955A00707D64 /* SpeechToTextView.swift in Sources */,
+				5E7CEAC52CB88E2500707D64 /* SpeechToTextService.swift in Sources */,
 				5E7CEAB52CB885FD00707D64 /* SpeechToTextApp.swift in Sources */,
+				5E7CEACB2CB8917E00707D64 /* RecognizerError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +346,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Speech To Text";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone to enable voice interactions and allow you to speak commands or provide input directly to the app.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "We use speech recognition to provide a more interactive and hands-free experience by allowing you to speak directly to the app for certain actions or features.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -314,7 +387,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Speech To Text";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone to enable voice interactions and allow you to speak commands or provide input directly to the app.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "We use speech recognition to provide a more interactive and hands-free experience by allowing you to speak directly to the app for certain actions or features.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
